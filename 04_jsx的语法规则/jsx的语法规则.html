@@ -36,9 +36,13 @@
         ReactDOM.render(VDOM, document.getElementById('test'))
 
         /**
+         * JSX: 全称JavsScript XML
+         * 是react定义的一种类似于XML的JS扩展语法：JS + XML 本质是
+         * React.createElement(component, props, ...children)方法的语法糖
+         * 
          * jsx语法规则：
          *  1.创建虚拟DOM时，不要写引号；
-         *  2.标签中要混入js表达式，要使用{}
+         *  2.标签中要混入【js表达式】，要使用{}
          *  3.标签中样式的类名要用className来指定
          *  4.标签中的内联样式要用style={{color:'white'}},属性名转为小驼峰
          *  5.VDOM每次创建只能有一个根标签
