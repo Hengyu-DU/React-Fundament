@@ -16,16 +16,20 @@
     <div id="test"></div>
 
     <script type="text/babel">
-       class Weather extends React.Component{
-           constructor(props){
-               super(props)
-               this.state = {isHot: false} // 初始化状态
-           }
-           render(){
-               return <h1>今天天气很{this.state.isHot?'炎热':'凉爽'}</h1>
-           }
-       }
-       ReactDOM.render(<Weather/>, document.getElementById('test'))
+        // 1.定义一个组件(函数式)
+        function Demo(){
+            console.log(this) // 此处的this是undefined，因为经过babel翻译，开启了严格模式
+            return <h2>我是用函数定义的组件（适用于【简单组件】的定义）</h2> // 组件标签
+        }
+
+        // 2.渲染组件到页面
+        ReactDOM.render(<Demo/>,document.getElementById('test'))
+        /**
+         * 执行了ReactDOM.render(<Demo/>....)后发生了什么?
+         * 1.React解析组件标签，寻找Demo组件的定义位置
+         * 2.React发现Demo组件是用函数定义的，
+         *    随后React去直接调用Demo函数，将返回的值渲染到页面
+        */
     </script>
 </body>
 </html>

@@ -49,9 +49,41 @@
                 console.log('我在努力学习！', this);//this是Student的实例
             }
         }
-        const s1 = new Student('Hello',20,'初一')
-        console.log(s1);
-        s1.study()
+        
+        class Car {
+            // 类能写什么代码？
+
+            // 构造器方法
+            constructor(name,price){
+                this.name = name
+                this.price = price
+            }
+
+            // 一般方法
+            run(){
+                console.log('我正在前进');
+            }
+
+            // 赋值语句，例如 a = 1 ，给实例自身添加一个属性名，名为a
+            a = 1
+            b = function(){
+                console.log("I'm b");
+            }
+        }
+
+        class Dog {
+            constructor(){
+            }
+            run(){
+            }
+            a = 1
+            static b = 2
+        }
+
+        const d = new Dog()
+        console.log(d);
+        console.log(Dog.b);//2  即 b是在Dog类上的
+
     </script>
 </body>
 </html>
