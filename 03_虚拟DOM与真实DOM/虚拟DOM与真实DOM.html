@@ -17,10 +17,11 @@
     <div id="test"></div>
 
     <script type='text/babel'>
-        // 1. 创建一个虚拟DOM
-        let VDOM = <h1>Hello, React</h1>
-        // 2. 让React 将虚拟DOM（VDOM）插入页面
-        ReactDOM.render(VDOM,document.getElementById('test'))
+        
+        let VDOM = <h1>Hello, React</h1> // 1. 创建一个虚拟DOM
+        
+        ReactDOM.render(VDOM,document.getElementById('test')) // 2. 让React 将虚拟DOM（VDOM）插入页面
+        
         console.log(typeof VDOM); // object
         console.log(VDOM instanceof Object); // true
 
