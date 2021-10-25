@@ -13,7 +13,7 @@ $ git add .(或*)
 或使用vscode的git中点 ＋ 号
 
 4. 推动到远程库
-```
+```powershell
 $ git commit -m 'description'
 ```
 或使用vscode的git中的 √ 号，并输入描述
@@ -21,8 +21,12 @@ $ git commit -m 'description'
 5. 删除git库，直接删除根目录下的 .git 文件
 
 6. 连接在线远程库和本地的远程库
-```
+```powershell
 $ git remote add origin git@github.com:Hengyu-DU/20210929.git
 $ git push origin master -u
 ```
 
+7. 查看远程仓库地址：
+```powershell
+$ git remote -v
+```
