@@ -30,3 +30,9 @@ $ git push origin master -u
 ```powershell
 $ git remote -v
 ```
+
+移除远程仓库地址：
+```
+git remote rm origin
+git remote add origin url
+```
