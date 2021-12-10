@@ -87,10 +87,17 @@
                 console.log('componentWillUnmount');
             }
 
+
+            UNSAFE_componentWillReceiveProps(){
+                // 第一次传的不算，第二次传的才会显示
+                console.log('componentWillReceiveProps');
+            }
+
+
             // *** 控制组件是否更新（该钩子可以进行组件的优化）
             shouldComponentUpdate() {
                 console.log('——————shouldComponentUpdate');
-                return false
+                return true
             }
             // *** 组件将要更新
             UNSAFE_componentWillUpdate() {
@@ -158,7 +165,7 @@
             }
         }
         ReactDOM.render(<Count/>, document.getElementById('test'))
-        ReactDOM.render(<A/>, document.getElementById('test2'))
+        // ReactDOM.render(<B/>, document.getElementById('test2'))
 
     </script>
 </body>

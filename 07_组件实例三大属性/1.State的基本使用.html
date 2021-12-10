@@ -23,27 +23,27 @@
                 // 給实例自身追加一个同名的changeWeather方法，
                 // 这个方法是根据原型上的changeWeather用bind生成的，
                 // 它的this不会丢失，指向Weather
-                this.changeWeather = this.changeWeather.bind(this)
+                // this.changeWeather = this.changeWeather.bind(this)
             }
             render(){
                 console.log('render里的this:',this)
                 // const { isHot } = this.state
                 return <h1 onClick={this.changeWeather}>今天天气很{this.state.isHot ? '炎热' : '凉爽'}</h1>
             }
-            // 程序员根据业务逻辑自己定义的事件回调
-            /**
-             * show函数是放在哪里的？ ———— Weather的原型对象上，供实例使用
-             * show函数中的this是谁？ ———— 如果show是通过Weather实例调用的，
-             *                            那么this就是Weather的实例对象。
-             *    然而，此时的show是作为点击事件的回调函数，根本不是通过Weather
-             *    的实例调用的，而且类中的方法自动开启了严格模式，所以this是undefined
-             *  
-             *              
-             * 上面show的问题：
-             * 1. 为什么加this： 因为show放在了原型对象上，所以这样指定回调函数。
-             * 2. 为什么把show()放在类里：因为要构成一个完整的组件。
-             * 3. 为什么里面不加小括号：因为JS解析的原理中，加小括号就直接运行了。
-            */
+// 程序员根据业务逻辑自己定义的事件回调
+/**
+changeWeather函数是放在哪里的？ ———— Weather的原型对象上，供实例使用
+changeWeather函数中的this是谁？ ———— 如果changeWeather是通过Weather实例调用的，
+                           那么this就是Weather的实例对象。
+   然而，此时的changeWeather是作为点击事件的回调函数，根本不是通过Weather
+   的实例调用的，而且类中的方法自动开启了严格模式，所以this是undefined
+ 
+             
+上面changeWeather的问题：
+1. 为什么加this： 因为changeWeather放在了原型对象上，所以这样指定回调函数。
+2. 为什么把changeWeather()放在类里：因为要构成一个完整的组件。
+3. 为什么里面不加小括号：因为JS解析的原理中，加小括号就直接运行了。
+*/
 
             changeWeather(){
                 // alert(1)

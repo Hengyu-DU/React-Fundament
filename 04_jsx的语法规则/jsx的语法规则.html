@@ -30,7 +30,7 @@
                 <h1 style={{ color: 'white', fontSize: '16px' }} className="title">{data}</h1>
                 <span>hello</span>
                 <input type="text" />
-                {/* <peiqi>一头猪</peiqi> */}
+                {/* 这是一条注释<peiqi>一头猪</peiqi> */}
             </div>)
         // 2.渲染虚拟DOM到页面
         ReactDOM.render(VDOM, document.getElementById('test'))
@@ -40,21 +40,21 @@
          * 是react定义的一种类似于XML的JS扩展语法：JS + XML 本质是
          * React.createElement(component, props, ...children)方法的语法糖
          * 
-         * jsx语法规则：
-         *  1.创建虚拟DOM时，不要写引号；
-         *  2.标签中要混入【js表达式】，要使用{}
-         *  3.标签中样式的类名要用className来指定
-         *  4.标签中的内联样式要用style={{color:'white'}},属性名转为小驼峰
-         *  5.VDOM每次创建只能有一个根标签
-         *  6.标签必须闭合（单标签加 / 自闭合）
-         *  7.关于标签首字母：
-         *      1） 若首字母小写，那么React就会去寻找与之同名的<html标签>
-         *          · 若找见，直接转为html同名元素
-         *          · 若未找见，报错
-         *      2） 若首字母大写，那么React就会去寻找与之同名的组件（component），
-         *          · 若找到就使用
-         *          · 若没有就会报错
-         *  8.注释时先用{}包起来变成js表达式再注释
+          * jsx语法规则：
+          *  1.创建虚拟DOM时，不要写引号；
+          *  2.标签中要混入【js表达式】，要使用{}
+          *  3.标签中样式的类名要用className来指定
+          *  4.标签中的内联样式要用style={{color:'white'}},属性名转为小驼峰
+          *  5.VDOM每次创建只能有一个根标签
+          *  6.标签必须闭合（单标签加 / 自闭合）
+          *  7.关于标签首字母：
+          *      1） 若首字母小写，那么React就会去寻找与之同名的<html标签>
+          *          · 若找见，直接转为html同名元素
+          *          · 若未找见，报错
+          *      2） 若首字母大写，那么React就会去寻找与之同名的组件（component），
+          *          · 若找到就使用
+          *          · 若没有就会报错
+          *  8.注释时先用{}包起来变成js表达式再注释
          */
 
     </script>

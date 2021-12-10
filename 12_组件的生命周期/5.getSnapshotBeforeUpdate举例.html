@@ -54,11 +54,13 @@
             }
 
             getSnapshotBeforeUpdate(){
+              console.log(this.refs.list.scrollHeight);
                 return this.refs.list.scrollHeight
             }
 
             componentDidUpdate(_,__,sv){
-                this.refs.list.scrollTop += this.refs.list.scrollHeight - sv
+              this.refs.list.scrollTop += this.refs.list.scrollHeight - sv
+              console.log(this.refs.list.scrollTop);
             }
 
             render(){
